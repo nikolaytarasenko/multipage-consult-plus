@@ -1,0 +1,6 @@
+.DS_store
+.idea
+.editorconfig
+build
+node_modules
+/*.exe.stackdump
