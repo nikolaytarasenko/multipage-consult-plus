@@ -1,0 +1,24 @@
+section.banner
+    .container
+        .banner__industry.industry
+            .industry__header
+                h2.industry__subtitle We are leading consulting company
+                h1.industry__title Choose your industry
+            .industry__content
+                for item in [['education', 'static/images/svg/symbol/sprite.svg#icon_education'],['business', 'static/images/svg/symbol/sprite.svg#icon_business'],['technology', 'static/images/svg/symbol/sprite.svg#icon_technology'],['real estate', 'static/images/svg/symbol/sprite.svg#icon_real-estate'],['banking', 'static/images/svg/symbol/sprite.svg#icon_banking']]
+                    .industry__item
+                        .industry__image
+                            svg(width="30px",height="30px")
+                                use(xlink:href=item[1])
+                        a.industry__text(href="#")
+                            div.industry__name=item[0]
+                            svg.industry__svg-link(width="20px",height="20px")
+                                use(xlink:href="static/images/svg/symbol/sprite.svg#arrow")
+                .industry__item.industry__item--btn
+                    a.industry__btn(href="#") view more
+    .banner__slider.slider
+        .slide
+            img(src="static/images/content/banner/slide1.jpg")
+        .slide
+            img(src="static/images/content/banner/slide2.jpg")
+
