@@ -142,16 +142,6 @@
   }
 
   &__btn {
-    background: $color-green;
-    color: $color-white;
-    border-radius: 25px;
-    font-size: 0.8125rem;
-    transition: 0.2s ease-out;
-    padding: 14px 18px;
-    text-transform: uppercase;
-
-    &:hover {
-      background: darken($color-green, 4%);
-    }
+    @include button();
   }
 }

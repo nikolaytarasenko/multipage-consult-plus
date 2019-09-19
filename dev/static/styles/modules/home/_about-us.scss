@@ -1,0 +1,71 @@
+.about {
+  margin: 100px 0;
+  
+  &__btn {
+    @include button();
+  }
+
+  &__container {
+    display: flex;
+  }
+  
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 50px;
+  }
+
+  &__description {
+    font-size: 0.9375rem;
+    color: $color-main;
+    font-family: 'Domine', Arial, sans-serif;
+    line-height: 2rem;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__image {
+    position: relative;
+  }
+}
+
+.badge {
+  position: absolute;
+  max-width: 240px;
+  height: 280px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -190px;
+  background: $color-blue;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+
+  &__inner {
+    height: inherit;
+    padding: 20px 0 30px;
+    border: 6px solid $color-white;
+    background: url("../images/content/about/badge_icon.png") center no-repeat;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__years {
+    font-size: 4.6875rem;
+  }
+
+  &__description {
+    font-size: 0.625rem;
+  }
+}

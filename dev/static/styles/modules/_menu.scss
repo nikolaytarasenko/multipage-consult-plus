@@ -5,6 +5,7 @@ $color-link: #4e4e4e;
   align-items: center;
   font-size: 0.875rem;
   font-weight: 400;
+  z-index: 2;
 
   &__list {
     display: flex;
@@ -34,6 +35,8 @@ $color-link: #4e4e4e;
     align-items: center;
     color: $color-link;
     transition: 0.1s ease;
+    font-size: 0.875rem;
+    text-transform: uppercase;
 
     &:hover {
       color: $color-orange;
