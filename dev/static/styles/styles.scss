@@ -5,10 +5,11 @@
 
 html {
   font-size: $base-font-size;
-  height: 100%;
 }
 
-body { height: 100%; }
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
@@ -44,10 +45,6 @@ button { outline: none; }
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.content {
-  flex: 1 0 auto;
 }
 
 .container {

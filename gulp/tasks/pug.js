@@ -10,9 +10,9 @@ module.exports = function () {
     $.gulp.task('pug', () => {
         return $.gulp.src('./dev/pug/*.pug')
             .pipe(plumber())
-            .pipe(changed('build', {extension: '.html'}))
+            //.pipe(changed('build', {extension: '.html'}))
             .pipe(gulpif(global.isWatching, cached('pug')))
-            .pipe(pugInheritance({basedir: './dev/pug/', skip: 'node_modules'}))
+            .pipe(pugInheritance({basedir: './dev/pug/', extension: '.pug', skip: 'node_modules'}))
             .pipe(filter(function (file) {
                 return !/\/_/.test(file.path) && !/^_/.test(file.relative);
             }))

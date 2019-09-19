@@ -1,1 +1,26 @@
 header.header
+    .header__top
+        .container
+            .header__contacts
+                .header__email Email :
+                    a.header__link(href="mailto:info@consultplus.com") info@consultplus.com
+                .header__phone Phone :
+                    a.header__link(href="tel:+91 5685 6664 555") +91 5685 6664 555
+    .header__bottom
+        .container
+            .header__main
+                a.header__logo(href="./")
+                    img(src="static/images/general/logo.png", alt="logo")
+                nav.header__menu.menu
+                    ul.menu__list
+                        for item in ['home', 'about us', 'industry', 'services', 'pages', 'contact us']
+                            if item === 'pages'
+                                li.menu__item.menu__dropdown
+                                    a.menu__link(href="#")=item
+                                    ul.menu__submenu
+                                        for subItem in ['404', 'blog', 'blog post', 'careers', 'faq', 'pricing', 'team', 'testimonials']
+                                            li.menu__subitem
+                                                a.menu__sublink(href="#")=subItem
+                            else
+                                li.menu__item
+                                    a.menu__link(href="#")=item
