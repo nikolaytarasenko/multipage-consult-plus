@@ -1,0 +1,103 @@
+$color-bg: #e7eff1;
+
+.our-blog {
+  display: flex;
+  position: relative;
+  background: $color-bg;
+
+  &__container,
+  &__image {
+    flex: 1;
+  }
+
+  &__content {
+    max-width: 585px;
+    margin-left: auto;
+    padding: 100px 30px 100px 15px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__image {
+    background: url("../images/content/our-blog/our-blog.jpg") center no-repeat;
+    background-size: cover;
+  }
+
+  &__controls {
+    margin-bottom: 4px;
+  }
+
+  &__control {
+    display: inline-block;
+    width: 140px;
+    padding: 5px 0;
+    color: $color-main;
+    border: 2px solid $color-orange;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    transition: 0.1s ease-out;
+
+    &:hover {
+      background: $color-orange;
+      color: $color-white;
+    }
+
+    &:last-child {
+      border: 2px solid $color-main;
+      margin-left: 10px;
+
+      &:hover {
+        background: $color-main;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.post {
+  display: block;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    transform: translateX(-20px);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__meta,
+  &__description {
+    font-size: 0.9125rem;
+    font-family: 'Domine', Arial, sans-serif;
+    color: $color-title;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-title;
+    margin: 10px 0 20px;
+  }
+
+  &__description {
+    color: $color-main;
+    line-height: 1.5rem;
+  }
+}
