@@ -1,0 +1,122 @@
+$color-text: #ddf8ff;
+
+.testimonials {
+  padding: 100px 0;
+  background: $color-blue;
+
+  &__title {
+    @include title();
+    color: $color-white;
+  }
+
+  &__subtitle {
+    @include subtitle();
+    color: $color-white;
+  }
+
+  &__list {
+    margin-top: 50px;
+
+    .slick-dots {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: none!important;
+    }
+
+    .slick-active {
+      button {
+        border: 3px solid $color-green;
+        background: $color-green;
+      }
+    }
+
+    button {
+      position: relative;
+      background: transparent;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border: 3px solid $color-white;
+      border-radius: 50%;
+      padding: 0;
+      transform: translateY(-15px);
+      transition: 0.1s ease-out;
+      cursor: pointer;
+    }
+
+    li {
+      height: 15px;
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 100px;
+    margin-bottom: 100px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 10px;
+    }
+
+    &::before {
+      content: url("../images/content/testimonials/icon-quote-left.png");
+      left: 0;
+    }
+
+    &::after {
+      content: url("../images/content/testimonials/icon-quote-right.png");
+      right: 0;
+    }
+  }
+
+  &__text {
+    @include description-text();
+    color: $color-text;
+  }
+
+  &__clients {
+    display: flex;
+  }
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  margin-right: 90px;
+  opacity: 0.5;
+  transition: 0.1s ease-out;
+
+  &:first-child {
+    opacity: 1;
+  }
+
+  &__image {
+    margin-right: 30px;
+  }
+
+  &__info {
+    color: $color-white;
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  &__company {
+    font-family: 'Domine', Arial, sans-serif;
+    color: $color-text;
+    font-size: 0.9125rem;
+  }
+}
