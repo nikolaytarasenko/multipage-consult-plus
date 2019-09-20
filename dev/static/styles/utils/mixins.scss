@@ -38,3 +38,10 @@
   text-transform: uppercase;
   color: $color-main;
 }
+
+@mixin description-text() {
+  font-size: 0.9375rem;
+  font-family: 'Domine', Arial, sans-serif;
+  color: $color-main;
+  line-height: 2rem;
+}

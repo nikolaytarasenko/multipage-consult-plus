@@ -1,0 +1,46 @@
+$color-bg: #e7eff1;
+
+.steps {
+  padding: 100px 0;
+  background: $color-bg;
+  z-index: 1;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.step {
+  &__icon {
+    max-width: 55px;
+    max-height: 58px;
+  }
+
+  &__number {
+    color: $color-green;
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+
+  &__description {
+    @include description-text();
+    margin-top: 1.25rem;
+  }
+}

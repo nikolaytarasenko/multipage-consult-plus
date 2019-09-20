@@ -1,5 +1,5 @@
 .about {
-  margin: 100px 0;
+  padding: 100px 0;
   
   &__btn {
     @include button();
@@ -19,10 +19,7 @@
   }
 
   &__description {
-    font-size: 0.9375rem;
-    color: $color-main;
-    font-family: 'Domine', Arial, sans-serif;
-    line-height: 2rem;
+    @include description-text();
   }
 
   &__title {
@@ -48,6 +45,7 @@
   bottom: -190px;
   background: $color-blue;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 
   &__inner {
     height: inherit;
