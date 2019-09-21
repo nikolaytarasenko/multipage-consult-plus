@@ -1,0 +1,46 @@
+$color-border: #e5eef0;
+
+.not-found {
+  padding: 0 0 100px;
+
+  &__container {
+    border-top: 1px solid $color-border;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    font-size: 12.5rem;
+    line-height: 1;
+    margin: 75px 0 50px;
+  }
+
+  &__image {
+    max-width: 170px;
+    margin: 0 15px 0 20px;
+  }
+  
+  &__info {
+    text-align: center;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    font-family: 'Domine', Arial, sans-serif;
+    color: $color-main;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    margin-top: 60px;
+    @include button();
+  }
+}

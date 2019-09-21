@@ -18,9 +18,18 @@ header.header
                                 li.menu__item.menu__dropdown
                                     a.menu__link(href="#")=item
                                     ul.menu__submenu
-                                        for subItem in ['404', 'blog', 'blog post', 'careers', 'faq', 'pricing', 'team', 'testimonials']
+                                        -
+                                            var subItems = [{'name': '404', 'link': '404.html'},
+                                                {'name': 'blog', 'link': 'blog.html'},
+                                                {'name': 'blog post', 'link': 'blog-post.html'},
+                                                {'name': 'careers', 'link': 'careers.html'},
+                                                {'name': 'faq', 'link': 'faq.html'},
+                                                {'name': 'pricing', 'link': 'pricing.html'},
+                                                {'name': 'team', 'link': 'team.html'},
+                                                {'name': 'testimonials', 'link': 'testimonials.html'}]
+                                        for subItem in subItems
                                             li.menu__subitem
-                                                a.menu__sublink(href="#")=subItem
+                                                a.menu__sublink(href=subItem.link)=subItem.name
                             else
                                 li.menu__item
                                     a.menu__link(href="#")=item
