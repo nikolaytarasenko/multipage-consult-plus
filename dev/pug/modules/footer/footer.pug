@@ -1,1 +1,30 @@
 footer.footer
+    .container
+        .footer__top
+            .footer__list
+                .footer__item.column
+                    h3.column__title newsletter
+                    .column__description Enter your email address to subscribe our notification of our new post & features by email.
+                    form.column__subscribe
+                        .column__control
+                            label.column__label
+                                input.column__input(type="text", placeholder="email address")
+                            input.column__input.column__input--submit(type="submit", value="subscribe")
+                .footer__item.column
+                    h3.column__title navigation
+                    .column__links
+                        for item in ['home', 'about us', 'industry', 'services', 'pages', 'contact us']
+                            a.column__link(href="#")=item
+                .footer__item.column
+                    h3.column__title industry
+                    .column__links
+                        for item in ['education', 'business', 'real estate', 'technology', 'banking', 'telecommunication', 'much more']
+                            a.column__link(href="#")=item
+                .footer__item.column
+                    h3.column__title follow us
+                    .column__links
+                        for item in ['facebook', 'twitter', 'instagram', 'linkedin', 'google+']
+                            a.column__link(href="#")=item
+
+        .footer__bottom
+            p Copyright © 2019 Consultplus theme.
