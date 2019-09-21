@@ -1,0 +1,59 @@
+.about-us-single {
+  padding: 100px 0;
+
+  &__container {
+    position: relative;
+    display: flex;
+  }
+
+  &__info {
+    flex: 3;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__image {
+    position: relative;
+    flex: 1;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 60px;
+    max-width: 880px;
+    margin-top: 40px;
+    @include description-text();
+  }
+
+  .badge {
+    height: 430px;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+
+    &__inner {
+      justify-content: flex-start;
+      padding: 130px 0 30px;
+      background: url(../images/content/about/badge_icon.png) center 10% no-repeat;
+    }
+
+    &__years {
+      &:nth-of-type(3) {
+        margin-top: 4.5rem;
+        font-size: 3rem;
+      }
+    }
+    
+    &__description {
+      text-transform: uppercase;
+    }
+  }
+}

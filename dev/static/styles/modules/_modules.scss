@@ -2,6 +2,9 @@
 @import "footer";
 @import "header";
 @import "menu";
+@import "content-page-banner";
+@import "badge";
+
 @import "home/banner";
 @import "home/about-us";
 @import "home/steps";
@@ -10,3 +13,4 @@
 @import "home/our-blog";
 @import "home/contact-us";
 @import "404/404";
+@import "about-us/about-us-single";
