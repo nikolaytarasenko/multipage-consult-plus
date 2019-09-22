@@ -1,0 +1,36 @@
+include ../../utils/mixins
+
+section.management
+    .management__container.container
+        h3.management__subtitle our
+        h2.management__title management
+        .management__list
+            .management__item.member
+                img.member__image(src="static/images/content/management/member-1.png", alt="ceo")
+                .member__info
+                    header.member__header
+                        h4.member__name john marshel
+                        p.member__position ceo
+                    p.member__description Scrambled it to make a type specimen book survived not only five centuries...
+                    .member__social
+                        +member-social
+            .management__item.member
+                img.member__image(src="static/images/content/management/member-2.png", alt="ceo")
+                .member__info
+                    header.member__header
+                        h4.member__name mariya jonsena
+                        p.member__position co-founder
+                    p.member__description Scrambled it to make a type specimen book survived not only five centuries...
+                    .member__social
+                        +member-social
+            .management__item.member
+                img.member__image(src="static/images/content/management/member-3.png", alt="ceo")
+                .member__info
+                    header.member__header
+                        h4.member__name tom smith
+                        p.member__position team lead
+                    p.member__description Scrambled it to make a type specimen book survived not only five centuries...
+                    .member__social
+                        +member-social
+        .management__buttons
+            a.management__btn(href="./team.html") view full team

@@ -5,3 +5,8 @@ mixin icon(name,section)
 	else
 		svg(class="image")
 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+
+mixin member-social
+	a.member__link.member__link--fb(href="#") facebook
+	a.member__link.member__link--tw(href="#") twitter
+	a.member__link.member__link--gp(href="#") google+
