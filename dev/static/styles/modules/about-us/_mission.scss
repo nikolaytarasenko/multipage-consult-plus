@@ -1,0 +1,35 @@
+.mission {
+  padding: 100px 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-column-gap: 30px;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__image {
+    margin-top: 2rem;
+  }
+
+  &__description {
+    @include description-text();
+    margin-top: 45px;
+  }
+
+  &__buttons {
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  &__btn {
+    @include button();
+  }
+}
