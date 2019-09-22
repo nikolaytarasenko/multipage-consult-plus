@@ -54,5 +54,18 @@ button { outline: none; }
   width: 100%;
 }
 
+.js-show {
+  display: block!important;
+}
+
+.js-hide {
+  display: none!important;
+}
+
+.js-overlay-show {
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
 // Modules
 @import "modules/modules";

@@ -6,7 +6,7 @@ section.positions
             .positions__item
                 .positions__heading
                     .positions__number 1
-                    .positions__name account manager
+                    .positions__name accountant manager
                 .positions__vacancies vacancy: 8
                 .positions__salary Salary range : $ 22-80 k
                 a.positions__btn(href="#") apply now
@@ -38,3 +38,32 @@ section.positions
                 .positions__vacancies vacancy: 22
                 .positions__salary Salary range : $ 30-100 k
                 a.positions__btn(href="#") apply now
+    .overlay
+        .modal
+            .modal__header
+                .modal__close &times;
+            h3.modal__subtitle Apply for the position of
+            h2.modal__title Accountant Manager
+            form.modal__form
+                label.modal__label.modal__label--1
+                    input.modal__input(type="text", id="first-name", name="first-name", placeholder="first name")
+                label.modal__label.modal__label--2
+                    input.modal__input(type="text", id="last-name", name="last-name", placeholder="last name")
+                label.modal__label.modal__label--3
+                    input.modal__input(type="email", id="email", name="email", placeholder="email")
+                label.modal__label.modal__label--4
+                    input.modal__input(type="tel", id="phone", name="phone", placeholder="phone number")
+                label.modal__label.modal__label--5
+                    input.modal__input(type="text", id="location", name="location", placeholder="location (city)")
+                label.modal__label.modal__label--6
+                    span.modal__file-title resume/cv (attach)
+                    input.modal__input(type="file", id="resume", name="resume", placeholder="resume/cv")
+                label.modal__label.modal__label--7
+                    textarea.modal__input.modal__textarea(name="about", placeholder="Write your self / copy paste your Resume")
+                label.modal__label.modal__label--8
+                    input.modal__input(type="text", id="linkedin", name="linkedin", placeholder="linkedin profile")
+                label.modal__label.modal__label--9
+                    input.modal__input(type="text", id="website", name="website", placeholder="website")
+                label.modal__label.modal__label--10
+                    input.modal__input(type="text", id="channel", name="channel", placeholder="How did you hear about this job? ")
+                input.modal__input.modal__btn(type="submit", value="submit")
