@@ -1,0 +1,33 @@
+.core-values {
+  padding: 100px 0;
+  background: $color-blue-light;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, auto));
+    grid-column-gap: 60px;
+    margin-top: 40px;
+  }
+
+  &__image {
+    max-width: 49px;
+    max-height: 49px;
+  }
+
+  &__name {
+    @include title-text();
+    margin-top: 2rem;
+  }
+
+  &__description {
+    @include description-text();
+  }
+}

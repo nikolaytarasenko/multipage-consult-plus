@@ -44,4 +44,12 @@
   font-family: 'Domine', Arial, sans-serif;
   color: $color-main;
   line-height: 2rem;
+  margin-top: 1.25rem;
+}
+
+@mixin title-text() {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1rem;
 }

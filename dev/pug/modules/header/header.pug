@@ -1,3 +1,19 @@
+-
+    var menuItems = [{'name': 'home', 'link': './'},
+        {'name': 'about us', 'link': 'about-us.html'},
+        {'name': 'industry', 'link': 'industry.html'},
+        {'name': 'services', 'link': 'services.html'},
+        {'name': 'pages', 'link': './'},
+        {'name': 'contact us', 'link': 'contact us.html'}]
+-
+    var submenuItems = [{'name': '404', 'link': '404.html'},
+        {'name': 'blog', 'link': 'blog.html'},
+        {'name': 'blog post', 'link': 'blog-post.html'},
+        {'name': 'careers', 'link': 'careers.html'},
+        {'name': 'faq', 'link': 'faq.html'},
+        {'name': 'pricing', 'link': 'pricing.html'},
+        {'name': 'team', 'link': 'team.html'},
+        {'name': 'testimonials', 'link': 'testimonials.html'}]
 header.header
     .header__top
         .container
@@ -13,23 +29,14 @@ header.header
                     img(src="static/images/general/logo.png", alt="logo")
                 nav.header__menu.menu
                     ul.menu__list
-                        for item in ['home', 'about us', 'industry', 'services', 'pages', 'contact us']
-                            if item === 'pages'
+                        for menuItem in menuItems
+                            if menuItem.name === 'pages'
                                 li.menu__item.menu__dropdown
-                                    a.menu__link(href="#")=item
+                                    a.menu__link(href=menuItem.link)=menuItem.name
                                     ul.menu__submenu
-                                        -
-                                            var subItems = [{'name': '404', 'link': '404.html'},
-                                                {'name': 'blog', 'link': 'blog.html'},
-                                                {'name': 'blog post', 'link': 'blog-post.html'},
-                                                {'name': 'careers', 'link': 'careers.html'},
-                                                {'name': 'faq', 'link': 'faq.html'},
-                                                {'name': 'pricing', 'link': 'pricing.html'},
-                                                {'name': 'team', 'link': 'team.html'},
-                                                {'name': 'testimonials', 'link': 'testimonials.html'}]
-                                        for subItem in subItems
+                                        for submenuItem in submenuItems
                                             li.menu__subitem
-                                                a.menu__sublink(href=subItem.link)=subItem.name
+                                                a.menu__sublink(href=submenuItem.link)=submenuItem.name
                             else
                                 li.menu__item
-                                    a.menu__link(href="#")=item
+                                    a.menu__link(href=menuItem.link)=menuItem.name

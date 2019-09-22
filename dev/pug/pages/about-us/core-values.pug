@@ -1,0 +1,23 @@
+include ../../utils/mixins
+- var firstValue = 'icon_client-satisfaction'
+- var secondValue = 'icon_fully-support'
+- var thirdValue = 'icon_win'
+- var className = 'core-values'
+
+.core-values
+    .container
+        h3.core-values__subtitle our
+        h2.core-values__title core values
+        .core-values__list
+            .core-values__item
+                +icon(firstValue, className)
+                .core-values__name client satisfaction
+                .core-values__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
+            .core-values__item
+                +icon(secondValue, className)
+                .core-values__name fully support
+                .core-values__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
+            .core-values__item
+                +icon(thirdValue, className)
+                .core-values__name we play to win
+                .core-values__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
