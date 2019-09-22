@@ -1,0 +1,27 @@
+include ../../utils/mixins
+
+section.careers
+    .container
+        h3.careers__subtitle our
+        h2.careers__title careers
+        p.careers__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+        .careers__offer.offer
+            img.offer__img(src="static/images/content/careers/career.jpg", alt="career")
+            .offer__info
+                h4.offer__heading what we offer
+                .offer__list
+                    .offer__item
+                        +icon('icon_coffee', 'offer')
+                        .offer__content
+                            h3.offer__title free coffee
+                            .offer__description Established fact that a reader will be distracted by the readable content of a page when looking at its layout point.
+                    .offer__item
+                        +icon('icon_meditation', 'offer')
+                        .offer__content
+                            h3.offer__title meditation
+                            .offer__description Unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only.
+                    .offer__item
+                        +icon('medical_insurance', 'offer')
+                        .offer__content
+                            h3.offer__title medical insurance
+                            .offer__description All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.

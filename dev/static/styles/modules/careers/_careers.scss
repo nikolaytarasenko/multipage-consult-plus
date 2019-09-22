@@ -1,0 +1,63 @@
+.careers {
+  padding: 100px 0;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__description {
+    @include description-text();
+  }
+
+  &__offer {
+    margin-top: 60px;
+  }
+}
+
+.offer {
+  display: flex;
+
+  &__heading {
+    @include title-text();
+    color: $color-title;
+    margin-top: 0;
+  }
+
+  &__img {
+    max-height: 500px;
+  }
+
+  &__info {
+    margin-left: 60px;
+  }
+
+  &__item {
+    display: flex;
+    padding: 30px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-blue-light;
+    }
+  }
+  
+  &__title {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: $color-title;
+  }
+
+  &__description {
+    @include description-text();
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 48px;
+    height: 43px;
+    margin-right: 30px;
+  }
+}
