@@ -1,6 +1,6 @@
-mixin icon(name,section)
+mixin icon(name,section,icon='')
 	if(section)
-		svg(class=section + "__image")
+		svg(class=section + "__image" + icon)
 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
 	else
 		svg(class="image")
