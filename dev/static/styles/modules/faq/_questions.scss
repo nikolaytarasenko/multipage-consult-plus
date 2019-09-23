@@ -1,0 +1,126 @@
+.questions {
+  padding: 100px 0;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  &__list {
+    flex: 3;
+    margin-right: 30px;
+
+    .questions__title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 30px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-blue-light;
+    }
+
+    &.js-accordion-active {
+      .questions__number {
+        background: $color-green;
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background: $color-orange;
+    color: $color-white;
+    transition: 0.1s ease-out;
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include description-text();
+    max-height: 0;
+    padding-left: 45px;
+    margin-top: 0;
+    overflow: hidden;
+    cursor: text;
+    transition: max-height 0.3s ease-in-out, padding-top 0.4s ease;
+  }
+
+  &__feedback {
+    flex: 1;
+    align-self: flex-start;
+    padding: 30px;
+    background: $color-blue;
+
+    .questions__title,
+    .questions__subtitle {
+      color: $color-white;
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    background: $color-blue;
+    color: $color-white;
+    border-bottom: 1px solid $color-border-bottom;
+
+    &:not(.questions__textarea) {
+      height: 100%;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $color-white;
+    }
+  }
+
+  &__btn {
+    @include button();
+    display: block;
+    height: 42px;
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    cursor: pointer;
+    appearance: none;
+  }
+}

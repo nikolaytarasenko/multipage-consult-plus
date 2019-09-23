@@ -67,5 +67,9 @@ button { outline: none; }
   visibility: visible!important;
 }
 
+.js-accordion-show {
+  padding-top: 30px;
+}
+
 // Modules
 @import "modules/modules";

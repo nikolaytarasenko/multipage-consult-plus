@@ -61,26 +61,54 @@ $(document).ready(function () {
             });
         }
 
-        closeButton.addEventListener('click', e => {
-            modal.classList.remove('js-show');
-            overlay.classList.remove('js-overlay-show');
-            form.classList.remove('js-hide');
-        });
+        if (closeButton) {
+            closeButton.addEventListener('click', e => {
+                modal.classList.remove('js-show');
+                overlay.classList.remove('js-overlay-show');
+                form.classList.remove('js-hide');
+            });
+        }
 
-        submitButton.addEventListener('click', e => {
-            e.preventDefault();
+        if (submitButton) {
+            submitButton.addEventListener('click', e => {
+                e.preventDefault();
 
-            const text = document.createElement('div');
-            text.className = 'modal__message';
-            text.textContent = 'Thank you! Your data was sent.';
-            form.classList.add('js-hide');
-            modal.appendChild(text);
+                const text = document.createElement('div');
+                text.className = 'modal__message';
+                text.textContent = 'Thank you! Your data was sent.';
+                form.classList.add('js-hide');
+                modal.appendChild(text);
+            });
+        }
+    };
+
+    // accordion on the faq page
+    const showContent = () => {
+        const accordionItems = document.querySelectorAll('.questions__item');
+
+        for (let i = 0; i < accordionItems.length; i++) {
+            accordionItems[i].addEventListener('click', function(e) {
+                this.classList.toggle('js-accordion-active');
+                const currentContent = this.querySelector('.questions__content');
+
+                currentContent.classList.toggle('js-accordion-show');
+                currentContent.style.maxHeight ? currentContent.style.maxHeight = null : currentContent.style.maxHeight = currentContent.scrollHeight + 30 + 'px';
+            });
+        }
+    };
+
+    // submit button on the faq page
+    const disableSubmit = () => {
+        document.querySelector('.questions__btn').addEventListener('click', e => {
+            e. preventDefault();
         });
     };
 
     // initialize the main functionality
     const init = () => {
         applyPosition();
+        showContent();
+        disableSubmit();
     };
 
     init();
