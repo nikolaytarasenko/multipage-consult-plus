@@ -1,0 +1,100 @@
+.connect {
+  padding: 100px 0;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 2fr 42px;
+    grid-column-gap: 30px;
+    margin-top: 40px;
+  }
+
+  &__label {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
+
+    &--select {
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background: $color-border-bottom;
+        z-index: 1;
+      }
+    }
+
+    &--textarea {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / 3;
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid $color-border-bottom;
+
+    &:not(.connect__textarea):not(.connect__btn) {
+      height: 100%;
+    }
+
+    &[type="submit"] {
+      @include button();
+      grid-column: 1 / 3;
+      height: 42px;
+      width: auto;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &__select {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-gray;
+    text-indent: 0;
+    width: calc(100% + 4px);
+    transform: translateX(-4px);
+    border-bottom: 0;
+  }
+
+  &__option {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-dark;
+
+    &[disabled="true"] {
+      color: $color-main;
+    }
+  }
+}

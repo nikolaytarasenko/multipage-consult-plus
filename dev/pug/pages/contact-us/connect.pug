@@ -1,0 +1,20 @@
+section.connect
+    .container
+        h3.connect__subtitle let's
+        h2.connect__title connect
+        form.connect__form
+            label.connect__label
+                input.connect__input(type="text", id="name", name="name", placeholder="name")
+            label.connect__label
+                input.connect__input(type="email", id="email", name="email", placeholder="email")
+            label.connect__label
+                input.connect__input(type="tel", id="phone", name="phone", placeholder="phone")
+            label.connect__label.connect__label--select
+                select.connect__input.connect__select(type="tel", id="phone", name="phone", placeholder="phone")
+                    option.connect__option(value="service", disabled="true", selected="true") service
+                    option.connect__option(value="service1") service 1
+                    option.connect__option(value="service2") service 2
+                    option.connect__option(value="service3") service 3
+            label.connect__label.connect__label--textarea
+                textarea.connect__input.connect__textarea(name="comment", rows="5", placeholder="comment")
+            input.connect__input.connect__btn(type="submit", value="submit now")
