@@ -1,0 +1,27 @@
+.help {
+  padding: 100px 0;
+  background: $color-blue;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__title,
+  &__subtitle {
+    color :$color-white;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    @include button();
+  }
+}
