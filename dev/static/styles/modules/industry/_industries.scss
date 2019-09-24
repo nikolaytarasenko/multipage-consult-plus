@@ -1,0 +1,73 @@
+.industries {
+  padding: 100px 0;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+    margin: 50px 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .industries__icon {
+        box-shadow: 0 1px 50px rgba(215, 226, 228, 0.75);
+      }
+
+      .industries__image {
+        fill: $color-orange;
+      }
+
+      .industries__name {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__icon {
+    padding: 40px;
+    margin-right: 55px;
+    border-radius: 50%;
+    border: 1px solid $color-blue-light;
+    transition: 0.2s ease-out;
+  }
+
+  &__image {
+    max-width: 60px;
+    max-height: 60px;
+    fill: $color-blue;
+    transition: 0.1s ease-out;
+  }
+
+  &__name {
+    @include title-text();
+    margin-top: 0;
+    transition: 0.2s ease-out;
+  }
+
+  &__description {
+    @include description-text();
+    margin-top: 0.5rem;
+  }
+  
+  &__buttons {
+    text-align: center;
+  }
+
+  &__btn {
+    @include button();
+    margin-top: 3rem;
+  }
+}
