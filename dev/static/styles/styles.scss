@@ -71,5 +71,11 @@ button { outline: none; }
   padding-top: 30px;
 }
 
+.pricing-page {
+  .questions {
+    background: $color-blue-light;
+  }
+}
+
 // Modules
 @import "modules/modules";
