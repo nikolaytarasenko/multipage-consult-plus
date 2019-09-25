@@ -1,0 +1,20 @@
+-
+    var images = ["static/images/content/teams/employee-1.jpg", "static/images/content/teams/employee-2.jpg",
+        "static/images/content/teams/employee-3.jpg", "static/images/content/teams/employee-4.jpg",
+        "static/images/content/teams/employee-5.jpg", "static/images/content/teams/employee-6.jpg",
+        "static/images/content/teams/employee-7.jpg", "static/images/content/teams/employee-8.jpg"]
+
+section.teams
+    .container
+        h3.teams__subtitle our
+        h2.teams__title teams
+        .teams__list
+            each image in images
+                .teams__item.employee
+                    img.employee__image(src=image, alt="employee")
+                    .employee__info
+                        .employee__heading
+                            .employee__name john doe
+                            .employee__position software developer
+                        .employee__social
+                            +member-social

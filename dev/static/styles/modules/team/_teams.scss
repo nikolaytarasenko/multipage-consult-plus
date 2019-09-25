@@ -1,0 +1,70 @@
+.teams {
+  padding: 100px 0;
+  background: $color-blue-light;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+  }
+}
+
+.employee {
+  position: relative;
+
+  &:hover {
+    .employee__info {
+      background: rgba(255, 172, 85, 0.8);
+    }
+
+    .employee__info {
+      transform: scale(1);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scale(0);
+    transition: 0.2s ease-out;
+  }
+
+  &__name {
+    @include title-text();
+    margin-top: 0;
+    color: $color-white;
+  }
+
+  &__position {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-top: 5px;
+  }
+  
+  &__heading {
+    text-align: center;
+  }
+
+  &__social {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+.leadership {
+  padding: 100px 0;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-column-gap: 32px;
+    margin-top: 50px;
+  }
+
+  &__item {
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__info {
+    padding: 50px 40px;
+    border: 1px solid $color-blue-light;
+    border-top: 0;
+  }
+
+  &__name {
+    @include title-text();
+    margin-top: 0;
+  }
+
+  &__position {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-main;
+    margin-top: 5px;
+  }
+
+  &__description {
+    @include description-text();
+  }
+
+  &__social {
+    margin-top: 60px;
+  }
+}
