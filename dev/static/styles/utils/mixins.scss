@@ -53,3 +53,26 @@
   text-transform: uppercase;
   margin-top: 1rem;
 }
+
+@mixin quote() {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background: $color-blue;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid $color-white;
+  border-radius: 50%;
+
+  &::before {
+    content: "“";
+    position: absolute;
+    width: 16px;
+    height: 26px;
+    color: $color-white;
+    font-size: 2.625rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,57 @@
+.clients-column {
+  padding: 100px 0;
+  background: $color-blue-light;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-column-gap: 60px;
+  }
+
+  &__info {
+    margin-top: 30px;
+  }
+
+  &__media {
+    display: inline-block;
+    position: relative;
+    margin-right: 60px;
+  }
+
+  &__image {
+    max-width: 132px;
+    max-height: 132px;
+    position: relative;
+    transition: 0.4s ease-out;
+  }
+
+  &__quote {
+    @include quote();
+  }
+
+  &__name {
+    @include title-text();
+    margin-top: 0;
+  }
+
+  &__industry {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: $color-main;
+  }
+
+  &__description {
+    @include description-text();
+  }
+
+  &__buttons {
+    margin-top: 75px;
+    text-align: center;
+  }
+
+  &__btn {
+    @include button();
+  }
+}
