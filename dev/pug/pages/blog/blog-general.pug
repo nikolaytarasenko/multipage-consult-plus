@@ -1,0 +1,148 @@
+section.blog
+    .blog__container.container
+        .blog__content
+            h3.blog__subtitle our
+            h2.blog__title blog
+            article.blog__post.blog__post--full.blog-post
+                a.blog-post__link(href="#")
+                    header.blog-post__header
+                        img.blog-post__img(src="static/images/content/blog/blog-post-1.jpg", alt="post image")
+                        .blog-post__headings
+                            .blog-post__date 11-feb-2019
+                            h3.blog-post__heading Blog Heading Lorem Ipsum is simply dummy
+                p.blog-post__summary Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                footer.blog-post__footer
+                    a.blog-post__btn(href="#") read more
+                    .blog-post__share.share
+                        .share__social
+                            .share__btn
+                                +icon('icon_share', 'share')
+                            .share__links
+                                a.share__link(href="#")
+                                    +icon('icon_share-fb', 'share')
+                                a.share__link(href="#")
+                                    +icon('icon_share-tw', 'share')
+                        .share__text share:
+            article.blog__post.blog__post--full.blog-post
+                a.blog-post__link(href="#")
+                    header.blog-post__header
+                        img.blog-post__img(src="static/images/content/blog/blog-post-2.jpg", alt="post image")
+                        .blog-post__headings
+                            .blog-post__date 10-feb-2019
+                            h3.blog-post__heading Blog Heading Lorem Ipsum is simply dummy
+                p.blog-post__summary Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                footer.blog-post__footer
+                    a.blog-post__btn(href="#") read more
+                    .blog-post__share.share
+                        .share__social
+                            .share__btn
+                                +icon('icon_share', 'share')
+                            .share__links
+                                a.share__link(href="#")
+                                    +icon('icon_share-fb', 'share')
+                                a.share__link(href="#")
+                                    +icon('icon_share-tw', 'share')
+                        .share__text share:
+            article.blog__post.blog__post--audio.blog-post
+                header.blog-post__header
+                    audio.blog-post__audio(controls)
+                p.blog-post__summary When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                footer.blog-post__footer
+                    a.blog-post__btn(href="#") read more
+                    .blog-post__share.share
+                        .share__social
+                            .share__btn
+                                +icon('icon_share', 'share')
+                            .share__links
+                                a.share__link(href="#")
+                                    +icon('icon_share-fb', 'share')
+                                a.share__link(href="#")
+                                    +icon('icon_share-tw', 'share')
+                        .share__text 10-feb-2019 | share:
+            article.blog__post.blog__post--testimonial.blog-post
+                header.blog-post__header
+                    .blog-post__testimonial Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries..
+                footer.blog-post__footer
+                    a.blog-post__btn(href="#") read more
+                    .blog-post__share.share
+                        .share__social
+                            .share__btn
+                                +icon('icon_share', 'share')
+                            .share__links
+                                a.share__link(href="#")
+                                    +icon('icon_share-fb', 'share')
+                                a.share__link(href="#")
+                                    +icon('icon_share-tw', 'share')
+                        .share__text 09-feb-2019 | share:
+            article.blog__post.blog__post--full.blog-post
+                a.blog-post__link(href="#")
+                    header.blog-post__header
+                        img.blog-post__img(src="static/images/content/blog/blog-post-3.jpg", alt="post image")
+                        .blog-post__headings
+                            .blog-post__date 08-feb-2019
+                            h3.blog-post__heading Blog Heading Lorem Ipsum is simply dummy
+                p.blog-post__summary Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                footer.blog-post__footer
+                    a.blog-post__btn(href="#") read more
+                    .blog-post__share.share
+                        .share__social
+                            .share__btn
+                                +icon('icon_share', 'share')
+                            .share__links
+                                a.share__link(href="#")
+                                    +icon('icon_share-fb', 'share')
+                                a.share__link(href="#")
+                                    +icon('icon_share-tw', 'share')
+                        .share__text share:
+            .blog__pagination.pagination
+                .pagination__prev
+                    a.pagination__link.pagination__link--prev(href="#")
+                        .pagination__icon
+                        span.pagination__text prev
+                .pagination__divider |
+                .pagination__next
+                    a.pagination__link.pagination__link--next(href="#")
+                        span.pagination__text next
+                        .pagination__icon
+        aside.blog__sidebar
+            .blog__widget.widget
+                .widget__title search
+                form.widget__search.search
+                    label.search__label
+                        input.search__input(placeholder="search")
+                        button.search__submit(type="submit")
+                            +icon('icon_search', 'search')
+            .blog__widget.widget
+                .widget__title categories
+                ul.widget__categories.categories
+                    li.categories__item
+                        a.categories__link(href="#") Phasellus mollis orci vitae
+                    li.categories__item
+                        a.categories__link(href="#") Nunc vitae felis vitae vestibulum
+                    li.categories__item
+                        a.categories__link(href="#") Morbi et quam vel mauris
+                    li.categories__item
+                        a.categories__link(href="#") In nec ante sed magna feugiat
+                    li.categories__item
+                        a.categories__link(href="#") Vivamus ac urna id nisl aliquet
+            .blog__widget.widget
+                .widget__title featured posts
+                .widget__featured.featured
+                    img.featured__image(src="static/images/content/blog/featured-post-1.jpg", alt="post image")
+                    a.featured__title(href="#") blog heading here
+                    .featured__date 11-feb-2019
+                .widget__featured.featured
+                    img.featured__image(src="static/images/content/blog/featured-post-2.jpg", alt="post image")
+                    a.featured__title(href="#") blog heading here
+                    .featured__date 10-feb-2019
+                .widget__featured.featured
+                    img.featured__image(src="static/images/content/blog/featured-post-3.jpg", alt="post image")
+                    a.featured__title(href="#") blog heading here
+                    .featured__date 09-feb-2019
+            .blog__widget.widget
+                .widget__title tags
+                .widget__tags.tags
+                    a.tags__btn(href="#") education
+                    a.tags__btn(href="#") consulting
+                    a.tags__btn(href="#") telecommunication
+                    a.tags__btn(href="#") law

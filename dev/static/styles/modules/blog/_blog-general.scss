@@ -1,0 +1,406 @@
+.blog {
+  padding: 100px 0;
+
+  &__container {
+    display: flex;
+  }
+
+  &__title {
+    @include title();
+    margin-bottom: 25px;
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__post {
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &__content {
+    flex: 3;
+    margin-right: 30px;
+  }
+
+  &__sidebar {
+    flex: 1;
+  }
+}
+
+.blog-post {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid $color-blue-light;
+
+  &__header {
+    position: relative;
+  }
+
+  &__headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: $color-white;
+  }
+
+  &__date {
+    background: $color-orange;
+    padding: 15px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    background: $color-dark;
+    padding: 15px;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+
+  &__summary {
+    @include description-text();
+    margin: 40px 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    @include button();
+  }
+
+  &__audio {
+    width: 100%;
+  }
+
+  &__testimonial {
+    @include description-text();
+    position: relative;
+    background: $color-blue;
+    color: $color-white;
+    margin-bottom: 50px;
+    padding: 70px 100px;
+
+    &::before,
+    &::after {
+      content: "❝";
+      position: absolute;
+
+      font-size: 3rem;
+      color: $color-white;
+    }
+
+    &::before {
+      content: "❝";
+      left: 65px;
+      top: 65px;
+    }
+
+    &::after {
+      content: "❞";
+      right: 65px;
+      bottom: 45px;
+    }
+  }
+}
+
+.share {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .share__btn {
+      border-color: $color-orange;
+      background: $color-orange;
+      fill: $color-white;
+    }
+
+    .share__links {
+      display: flex;
+      padding: 0 60px 0 20px;
+      width: auto;
+      opacity: 1;
+    }
+
+    .share__image {
+      opacity: 1;
+    }
+
+    .share__text {
+      visibility: hidden;
+    }
+  }
+
+  &__social {
+    position: relative;
+    order: 1;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 10px;
+    order: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  &__image {
+    max-height: 20px;
+    max-width: 15px;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-blue-light;
+    border-radius: 50%;
+    transition: 0.1s ease-out;
+  }
+
+  &__links {
+    width: 44px;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    right: calc(100% - 44px);
+    transform: translateY(-50%);
+    border: 1px solid $color-blue-light;
+    border-radius: 25px;
+    height: 44px;
+    padding: 0 0 0 12px;
+    align-items: center;
+    transition: 0.2s linear;
+    display: flex;
+
+    .share__image {
+      opacity: 0;
+      fill: $color-main;
+    }
+  }
+
+  &__link {
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      .share__image {
+        fill: $color-orange;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+
+  &__divider {
+    margin: 0 1rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $color-dark;
+
+    &--prev {
+      .pagination__icon {
+        margin-right: 10px;
+
+        &::before {
+          content: "◄";
+        }
+      }
+    }
+
+    &--next {
+      .pagination__icon {
+        margin-left: 10px;
+
+        &::after {
+          content: "►";
+        }
+      }
+    }
+
+    &:hover {
+      .pagination__icon {
+        background: $color-green;
+      }
+
+      .pagination__text {
+        color: $color-orange;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: $color-orange;
+    transition: 0.1s ease-out;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-white;
+      font-size: 0.5rem;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: 0.1s ease-out;
+  }
+}
+
+.widget {
+  margin-bottom: 60px;
+
+  &__title {
+    @include title-text();
+    margin-bottom: 20px;
+  }
+}
+
+.search {
+  &__label {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 50px 10px 20px;
+    border: 1px solid $color-blue-middle;
+
+    &::placeholder {
+      color: $color-blue-middle;
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      .search__image {
+        fill: $color-orange;
+      }
+    }
+  }
+
+  &__image {
+    width: 15px;
+    height: 15px;
+    fill: $color-main;
+    transition: 0.1s ease-out;
+  }
+}
+
+.categories {
+  &__item {
+    position: relative;
+    padding-left: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '»';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: $color-orange;
+    }
+  }
+
+  &__link {
+    color: $color-main;
+    font-size: 0.9125rem;
+    transition: 0.1s ease-out;
+
+    &:hover {
+      color: $color-orange;
+      margin-left: -3px;
+    }
+  }
+}
+
+.featured {
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    .featured__image {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+    transition: 0.1s ease-out;
+  }
+
+  &__title {
+    @include title-text();
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+    margin-top: 0;
+    color: $color-dark;
+  }
+
+  &__date {
+    color: $color-orange;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__btn {
+    @include button();
+    display: block;
+    margin: 10px 0;
+
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+  }
+}
